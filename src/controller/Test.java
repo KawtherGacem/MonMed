@@ -41,6 +41,9 @@ public class Test implements Initializable {
     @FXML
     private JFXListView<HBox> listView = new JFXListView<HBox>();
 
+//    iajwefa;owieuf;aowefa;ipwfuapwjfiawurfpawjfa
+
+
     public void initialize (URL location, ResourceBundle resources){
 
 
@@ -62,7 +65,6 @@ public class Test implements Initializable {
             ex.printStackTrace();
         }
 
-// asfiajoifjawrigaorwgfoaeirhga;eori;ago
 
     }
     public void createHbox(Question question){
