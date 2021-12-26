@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="sqlite-jdbc-3.32.3.2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../../Program Files/Microsoft JDBC DRIVER 9.2 for SQL Server/sqljdbc_9.2/enu/sqlite-jdbc-3.32.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../sqlite-jdbc-3.32.3.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
