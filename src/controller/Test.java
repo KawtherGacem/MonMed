@@ -1,8 +1,8 @@
 package controller;
 
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXListView;
-import com.jfoenix.controls.JFXMasonryPane;
+import com.jfoenix.controls.*;
+import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,11 +10,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.util.Callback;
 import model.Question;
 import utils.DBConnection;
 
@@ -41,12 +43,31 @@ public class Test implements Initializable {
     @FXML
     private JFXListView<HBox> listView = new JFXListView<HBox>();
 
-//    iajwefa;owieuf;aowefa;ipwfuapwjfiawurfpawjfa
-//    kius\hfdoufhawuraihgaiuwghkrwgsheur
+    @FXML
+    private JFXTreeTableView<Question> questionsTableView;
+
 
 
     public void initialize (URL location, ResourceBundle resources){
 
+        JFXTreeTableColumn<Question,String> titleColumn = new JFXTreeTableColumn("Titre");
+        titleColumn.setPrefWidth(340);
+        JFXTreeTableColumn<Question,String> specialiteColumn = new JFXTreeTableColumn("Specialite");
+        specialiteColumn.setPrefWidth(150);
+        JFXTreeTableColumn<Question,Integer> upColumn = new JFXTreeTableColumn("Upvotes");
+        JFXTreeTableColumn<Question,Integer> downColumn = new JFXTreeTableColumn("Downvotes");
+
+        titleColumn.setCellValueFactory(new TreeItemPropertyValueFactory<>("titre"));
+        specialiteColumn.setCellValueFactory(new TreeItemPropertyValueFactory<>("Specialite"));
+        upColumn.setCellValueFactory(new TreeItemPropertyValueFactory<>("up"));
+        downColumn.setCellValueFactory(new TreeItemPropertyValueFactory<>("down"));
+
+
+
+        questionsTableView.getColumns().addAll(titleColumn,specialiteColumn,upColumn,downColumn);
+
+
+        ObservableList<Question> questionsList = FXCollections.observableArrayList();
 
         String sqlQuery = "SELECT * FROM question";
 
@@ -58,15 +79,21 @@ public class Test implements Initializable {
             while(rs.next()){
                 question = new Question(
                         rs.getString("titre"),
+                        rs.getString("specialite"),
                         rs.getInt("up"),
                         rs.getInt("down"));
                 createHbox(question);
+                questionsList.add(question);
             }
         }catch (Exception ex){
             ex.printStackTrace();
         }
 
+        TreeItem<Question> root = new RecursiveTreeItem<>(questionsList, RecursiveTreeObject::getChildren);
+        questionsTableView.setRoot(root);
+        questionsTableView.setShowRoot(false);
 
+//        questionsTableView.setOnMouseClicked();
     }
     public void createHbox(Question question){
         Label titleLabel = new Label(question.getTitre());
