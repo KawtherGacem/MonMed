@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.login.Login">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.login.LoginController">
    <children>
       <ImageView fitHeight="410.0" fitWidth="600.0" layoutX="2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../controller/images/login.png" />
+            <Image url="@../../controller/images/login.png" />
          </image></ImageView>
-      <TextField layoutX="80.0" layoutY="108.0" prefHeight="33.0" prefWidth="222.0" promptText="Nom utilisateur" style="-fx-border-color: #2b478b; -fx-border-radius: 5em; -fx-background-radius: 5em;">
+      <TextField layoutX="78.0" layoutY="108.0" prefHeight="33.0" prefWidth="222.0" promptText="Nom utilisateur" style="-fx-border-color: #2b478b; -fx-border-radius: 5em; -fx-background-radius: 5em;">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
