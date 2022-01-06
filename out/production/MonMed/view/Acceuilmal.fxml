@@ -1,8 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="700.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.acceuilmal.Acceuilmal">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1360.0" stylesheets="@Css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <BorderPane prefHeight="695.0" prefWidth="1304.0">
+            <left>
+                <AnchorPane prefHeight="695.0" prefWidth="193.0" style="-fx-background-color: #ffff;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button layoutX="-1.0" layoutY="227.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="194.0" style="-fx-background-color: transparent;" text="Acceuil" textFill="#05c2d1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../controller/images/home.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button layoutY="313.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="192.0" style="-fx-background-color: transparent;" text="Profile" textFill="#05c2d1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../controller/images/profile.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button layoutX="-3.0" layoutY="396.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="196.0" style="-fx-background-color: transparent;" text="Contact" textFill="#05c2d1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../controller/images/phone.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button layoutY="477.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="192.0" style="-fx-background-color: transparent;" text="Exite" textFill="#05c2d1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="38.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../controller/images/exit.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Text fill="#223046" layoutX="85.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom " wrappingWidth="51.763671875">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                        <Text fill="#223046" layoutX="59.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="du  malade" wrappingWidth="123.0">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                        <ImageView fitHeight="92.0" fitWidth="86.0" layoutX="65.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../controller/images/Sans titre - 1.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </left>
+            <center>
+                <AnchorPane prefHeight="682.0" prefWidth="877.0" style="-fx-background-color: #ebedf3;" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextField layoutX="17.0" layoutY="17.0" prefHeight="63.0" prefWidth="573.0" promptText="Chercher une question" style="-fx-background-radius: 1em; -fx-border-radius: 1em;">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </TextField>
+                        <Button layoutX="602.0" layoutY="18.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="66.0" style="-fx-background-color: transparent;" />
+                        <Text fill="#223046" layoutX="21.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Questions :">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Text>
+                        <TableView layoutX="19.0" layoutY="154.0" prefHeight="512.0" prefWidth="848.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-background-color: transparent;">
+                            <columns>
+                                <TableColumn prefWidth="517.0" text="Titre de question" />
+                                <TableColumn prefWidth="171.0" text="Spécialité" />
+                                <TableColumn prefWidth="79.0">
+                                    <graphic>
+                                        <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../controller/images/like.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </TableColumn>
+                                <TableColumn prefWidth="79.0">
+                                    <graphic>
+                                        <ImageView fitHeight="32.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../controller/images/dislike.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                        <AnchorPane layoutX="893.0" layoutY="-16.0" prefHeight="710.0" prefWidth="277.0" style="-fx-background-color: #ffff;">
+                            <children>
+                                <Text fill="#223046" layoutX="61.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mailleurs médecins :" wrappingWidth="205.83203125">
+                                    <font>
+                                        <Font size="23.0" />
+                                    </font>
+                                </Text>
+                                <ImageView fitHeight="40.0" fitWidth="42.0" layoutX="18.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../controller/images/star.png" />
+                                    </image>
+                                </ImageView>
+                                <TableView layoutX="12.0" layoutY="104.0" prefHeight="394.0" prefWidth="252.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-background-color: transparent;">
+                                    <columns>
+                                        <TableColumn prefWidth="185.0" text="Nom" />
+                                        <TableColumn prefWidth="66.0">
+                                            <graphic>
+                                                <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../controller/images/like.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </TableColumn>
+                                    </columns>
+                                </TableView>
+                                <ImageView fitHeight="130.0" fitWidth="234.0" layoutX="24.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../controller/images/logo.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="60.0" fitWidth="68.0" layoutX="594.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../controller/images/search.png" />
+                            </image>
+                        </ImageView>
+                  <Button layoutX="676.0" layoutY="24.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="196.0" style="-fx-background-color: #05c2d1; -fx-background-radius: 2em; -fx-border-radius: 2em;" text="ajouter qst" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
 </AnchorPane>

@@ -1,14 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.profilemal.Profilemal"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1360.0" stylesheets="@Css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <BorderPane prefHeight="682.0" prefWidth="1304.0">
+            <left>
+                <AnchorPane prefHeight="682.0" prefWidth="190.0" style="-fx-background-color: #ffff;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button layoutX="23.0" layoutY="227.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Acceuil" textFill="#05c2d1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../controller/images/home.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button layoutX="24.0" layoutY="313.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="168.0" style="-fx-background-color: transparent;" text="Profile" textFill="#05c2d1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../controller/images/profile.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button layoutX="25.0" layoutY="396.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="168.0" style="-fx-background-color: transparent;" text="Contact" textFill="#05c2d1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../controller/images/phone.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button layoutX="24.0" layoutY="477.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="168.0" style="-fx-background-color: transparent;" text="Exite" textFill="#05c2d1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="38.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../controller/images/exit.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Text fill="#223046" layoutX="85.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom " wrappingWidth="51.763671875">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                        <Text fill="#223046" layoutX="62.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="du malade" wrappingWidth="105.0">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                        <ImageView fitHeight="92.0" fitWidth="86.0" layoutX="65.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../controller/images/Sans titre - 1.png" />
+                            </image>
+                        </ImageView>
+                        <AnchorPane layoutX="-1.0" layoutY="-2.0" prefHeight="684.0" prefWidth="26.0" style="-fx-background-color: #223046;" />
+                        <ImageView fitHeight="64.0" fitWidth="176.0" layoutX="35.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../controller/images/logo.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </left>
+            <right>
+                <AnchorPane prefHeight="682.0" prefWidth="1171.0" style="-fx-background-color: #ebedf3;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button layoutX="602.0" layoutY="18.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="66.0" style="-fx-background-color: transparent;" />
+                        <TextField layoutX="7.0" layoutY="12.0" prefHeight="49.0" prefWidth="433.0" promptText="Tire de question" style="-fx-background-color: transparent;">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </TextField>
+                        <AnchorPane layoutX="20.0" layoutY="60.0" prefHeight="2.0" prefWidth="482.0" style="-fx-background-color: #05c2d1;" />
+                        <ImageView fitHeight="42.0" fitWidth="40.0" layoutX="43.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../controller/images/like.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="39.0" layoutY="621.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../controller/images/dislike.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="42.0" fitWidth="48.0" layoutX="38.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../controller/images/comment.png" />
+                            </image>
+                        </ImageView>
+                        <Text layoutX="228.0" layoutY="645.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="54.13671875">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="215.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="54.13671875">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="210.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="54.13671875">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                        <TextField alignment="TOP_LEFT" layoutX="28.0" layoutY="131.0" prefHeight="48.0" prefWidth="297.0" promptText="nom" style="-fx-background-color: transparent;" text="nom">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </TextField>
+                        <TextField alignment="TOP_LEFT" layoutX="407.0" layoutY="232.0" prefHeight="38.0" prefWidth="297.0" promptText="numero" style="-fx-background-color: transparent;" text="numéro">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </TextField>
+                        <TextField alignment="TOP_LEFT" layoutX="408.0" layoutY="129.0" prefHeight="38.0" prefWidth="297.0" promptText="prenom" style="-fx-background-color: transparent;" text="prénom">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </TextField>
+                        <TextField alignment="TOP_LEFT" layoutX="28.0" layoutY="232.0" prefHeight="38.0" prefWidth="297.0" promptText="email" style="-fx-background-color: transparent;" text="email">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </TextField>
+                        <ComboBox layoutX="409.0" layoutY="329.0" prefHeight="57.0" prefWidth="291.0" promptText="wilaya" style="-fx-background-color: transparent;" visibleRowCount="18" />
+                        <ComboBox layoutX="30.0" layoutY="326.0" prefHeight="57.0" prefWidth="77.0" promptText="age" style="-fx-background-color: transparent;" visibleRowCount="18" />
+                        <AnchorPane layoutX="420.0" layoutY="290.0" prefHeight="2.0" prefWidth="315.0" style="-fx-background-color: #2b478b;" />
+                        <AnchorPane layoutX="422.0" layoutY="188.0" prefHeight="2.0" prefWidth="315.0" style="-fx-background-color: #2b478b;" />
+                        <AnchorPane layoutX="39.0" layoutY="286.0" prefHeight="2.0" prefWidth="315.0" style="-fx-background-color: #2b478b;" />
+                        <AnchorPane layoutX="39.0" layoutY="186.0" prefHeight="2.0" prefWidth="315.0" style="-fx-background-color: #2b478b;" />
+                        <Text layoutX="34.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistiques :">
+                            <font>
+                                <Font size="34.0" />
+                            </font>
+                        </Text>
+                        <ImageView fitHeight="290.0" fitWidth="389.0" layoutX="810.0" layoutY="-78.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../controller/images/tjor.png" />
+                            </image>
+                        </ImageView>
+                        <Button layoutX="873.0" layoutY="346.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="168.0" style="-fx-background-color: #05c2d1; -fx-background-radius: 2em; -fx-border-radius: 2em;" text="modifier" textFill="WHITE">
+                            <font>
+                                <Font size="23.0" />
+                            </font>
+                        </Button>
+                        <Text layoutX="92.0" layoutY="586.0" strokeType="OUTSIDE" strokeWidth="0.0" text="vote pour :">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="90.0" layoutY="646.0" strokeType="OUTSIDE" strokeWidth="0.0" text="vote contre :">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="94.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="réponces :">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Text>
+                  <ComboBox layoutX="148.0" layoutY="326.0" prefHeight="57.0" prefWidth="209.0" promptText="sexe" style="-fx-background-color: transparent;" visibleRowCount="18" />
+                  <ImageView fitHeight="282.0" fitWidth="547.0" layoutX="717.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../controller/images/mjm3in.png" />
+                     </image></ImageView>
+                    </children>
+                </AnchorPane>
+            </right>
+        </BorderPane>
+    </children>
 </AnchorPane>
