@@ -8,7 +8,7 @@ public class DBConnection {
     public static Connection getConnection(){
         Connection connection = null;
         try {
-            String jdbcurl= "jdbc:sqlite:src/resources/test.db";
+            String jdbcurl= "jdbc:sqlite:src/resources/monmed.db";
             connection = DriverManager.getConnection(jdbcurl);
             System.out.println("Connected!");
         } catch (SQLException e ) {

@@ -27,16 +27,22 @@ public class SignUpMalController {
     private TextField ageTextField;
 
     @FXML
-    private TextField confirmerMotDePasseTextField;
+    private Label alertLabel;
 
     @FXML
-    private TextField malNomTextField;
+    private TextField confirmerMotDePasseTextField;
 
     @FXML
     private TextField motDePasseTextField;
 
     @FXML
+    private TextField nomTextField;
+
+    @FXML
     private TextField nomUtilisateurTextField;
+
+    @FXML
+    private TextField prenomTextField;
 
     @FXML
     private Button sinscrireBtn;
@@ -45,11 +51,8 @@ public class SignUpMalController {
     private TextField wilayaTextField;
 
     @FXML
-    private Label alertLabel;
-
-    @FXML
     void sinscrireBtnOnClick(ActionEvent event) throws IOException {
-        if (sinscrire(malNomTextField.getText(),nomUtilisateurTextField.getText(),
+        if (sinscrire(nomTextField.getText(),prenomTextField.getText(),nomUtilisateurTextField.getText(),
                 wilayaTextField.getText(),ageTextField.getText(),motDePasseTextField.getText(),
                 confirmerMotDePasseTextField.getText()).equals("Success")){
             Parent root = FXMLLoader.load(getClass().getResource("../../view/login/Login.fxml"));
@@ -60,13 +63,13 @@ public class SignUpMalController {
         }
     }
 
-    public String sinscrire(String nom, String nomUtilisateur,String wilaya,String age,String motDePasse ,String confirmerMotDePasse){
+    public String sinscrire(String nom,String prenom, String nomUtilisateur,String age,String wilaya,String motDePasse ,String confirmerMotDePasse){
         String status = "Success";
         try (Connection c = DBConnection.getConnection();) {
             nom.trim();
             nomUtilisateur.trim();
 
-            if (nomUtilisateur.isEmpty() || motDePasse.isEmpty() || nom.isEmpty()) {
+            if (nom.isEmpty() || prenom.isEmpty() || nomUtilisateur.isEmpty()|| age.isEmpty() || wilaya.isEmpty()) {
                 alertLabel.setText("Please complete all the fills");
                 alertLabel.setTextFill(RED);
                 status = "fail";
@@ -91,14 +94,15 @@ public class SignUpMalController {
                             alertLabel.setTextFill(RED);
                             status = "fail";
                         } else {
-                            String sql2 = "insert into malades (nom_malade, nom_utilisateur_malade, password, age, wilaya) values(?,?,?,?,?)";
+                            String sql2 = "insert into malades (nom_malade, prenom_malade, nom_utilisateur_malade, password, age, wilaya) values(?,?,?,?,?,?)";
                             preparedStatement = c.prepareStatement(sql2);
 
                             preparedStatement.setString(1, nom);
-                            preparedStatement.setString(2, nomUtilisateur);
-                            preparedStatement.setString(3, motDePasse);
-                            preparedStatement.setString(4, age);
-                            preparedStatement.setString(5, wilaya);
+                            preparedStatement.setString(2, prenom);
+                            preparedStatement.setString(3, nomUtilisateur);
+                            preparedStatement.setString(4, motDePasse);
+                            preparedStatement.setString(5, age);
+                            preparedStatement.setString(6, wilaya);
                             preparedStatement.execute();
 
                             alertLabel.setText("Account successfully registered");

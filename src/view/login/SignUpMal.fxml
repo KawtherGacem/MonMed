@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.login.SignUpMalController">
+   <children>
+      <TextField fx:id="nomTextField" layoutX="48.0" layoutY="71.0" promptText="Nom">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="prenomTextField" layoutX="323.0" layoutY="71.0" promptText="Prenom">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="nomUtilisateurTextField" layoutX="48.0" layoutY="140.0" promptText="nom d'utilisateur">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="ageTextField" layoutX="323.0" layoutY="140.0" prefHeight="32.0" prefWidth="64.0" promptText="age">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="wilayaTextField" layoutX="405.0" layoutY="140.0" prefHeight="32.0" prefWidth="109.0" promptText="wilaya">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="motDePasseTextField" layoutX="48.0" layoutY="208.0" promptText="mot de passe">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="confirmerMotDePasseTextField" layoutX="323.0" layoutY="208.0" promptText="confirmer le mot de pase">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="sinscrireBtn" layoutX="192.0" layoutY="293.0" mnemonicParsing="false" onAction="#sinscrireBtnOnClick" prefHeight="32.0" prefWidth="173.0" text="S'inscrire">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="alertLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="193.0" layoutY="276.0" prefHeight="17.0" prefWidth="173.0" textAlignment="CENTER">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
