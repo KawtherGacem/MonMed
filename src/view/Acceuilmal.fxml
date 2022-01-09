@@ -12,11 +12,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1360.0" stylesheets="@Css/Css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="1280.0" stylesheets="@Css/Css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <BorderPane prefHeight="695.0" prefWidth="1304.0">
+      <BorderPane prefHeight="679.0" prefWidth="1280.0">
          <left>
-            <AnchorPane prefHeight="699.0" prefWidth="193.0" style="-fx-background-color: #ffff;" stylesheets="@Css/button.css" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="669.0" prefWidth="193.0" style="-fx-background-color: #ffff;" stylesheets="@Css/button.css" BorderPane.alignment="CENTER">
                <children>
                   <Button layoutX="-3.0" layoutY="217.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="194.0" text="Acceuil" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <font>
@@ -63,9 +63,9 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button layoutY="477.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="193.0" text="Exit" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Button alignment="CENTER" layoutX="-1.0" layoutY="477.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="193.0" text="Exit" textFill="#05c2d1" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
                      <font>
-                        <Font size="22.0" />
+                        <Font size="23.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
@@ -74,9 +74,10 @@
                            </image>
                         </ImageView>
                      </graphic>
-                     <padding>
-                        <Insets left="-34.0" />
-                     </padding>
+                     <opaqueInsets>
+                        <Insets left="16.0" />
+                     </opaqueInsets>
+
                   </Button>
                   <Text fill="#223046" layoutX="32.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Nom " wrappingWidth="129.09700393676758">
                      <font>
@@ -93,7 +94,7 @@
                         <Image url="@../controller/images/Sans titre - 1.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="72.0" fitWidth="164.0" layoutX="15.0" layoutY="626.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="72.0" fitWidth="164.0" layoutX="16.0" layoutY="585.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../controller/images/logo.png" />
                      </image>
@@ -102,13 +103,13 @@
             </AnchorPane>
          </left>
          <center>
-            <AnchorPane prefHeight="714.0" prefWidth="1190.0" style="-fx-background-color: #ebedf3;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="679.0" prefWidth="1093.0" style="-fx-background-color: #ebedf3;" BorderPane.alignment="CENTER">
                <children>
-                  <TableView layoutX="19.0" layoutY="154.0" prefHeight="512.0" prefWidth="848.0" style="-fx-background-color: transparent;" stylesheets="@Css/Css.css">
+                  <TableView layoutX="19.0" layoutY="154.0" prefHeight="512.0" prefWidth="770.0" style="-fx-background-color: transparent;" stylesheets="@Css/Css.css">
                      <columns>
-                        <TableColumn prefWidth="471.6666259765625" text="Titre de question" />
-                        <TableColumn prefWidth="138.3333740234375" text="Spécialité" />
-                        <TableColumn prefWidth="111.3333740234375" text="upvotes">
+                        <TableColumn prefWidth="428.0" text="Titre de question" />
+                        <TableColumn prefWidth="125.0" text="Spécialité" />
+                        <TableColumn prefWidth="106.0" text="upvotes">
                            <graphic>
                               <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -117,7 +118,7 @@
                               </ImageView>
                            </graphic>
                         </TableColumn>
-                        <TableColumn prefWidth="127.6666259765625" text="downvotes">
+                        <TableColumn prefWidth="110.0" text="downvotes">
                            <graphic>
                               <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -139,9 +140,9 @@
                         <Font size="35.0" />
                      </font>
                   </Text>
-                  <AnchorPane layoutX="893.0" layoutY="-16.0" prefHeight="730.0" prefWidth="277.0" style="-fx-background-color: #ffff;">
+                  <AnchorPane layoutX="825.0" layoutY="-2.0" prefHeight="683.0" prefWidth="262.0" style="-fx-background-color: #ffff;">
                      <children>
-                        <TableView layoutX="12.0" layoutY="104.0" prefHeight="442.0" prefWidth="252.0" style="-fx-background-color: transparent;" stylesheets="@Css/Css.css">
+                        <TableView layoutX="16.0" layoutY="104.0" prefHeight="398.0" prefWidth="230.0" style="-fx-background-color: transparent;" stylesheets="@Css/Css.css">
                            <columns>
                               <TableColumn prefWidth="185.0" text="Nom" />
                               <TableColumn prefWidth="66.0">
@@ -155,7 +156,7 @@
                               </TableColumn>
                            </columns>
                         </TableView>
-                        <TextField alignment="CENTER" layoutX="22.0" layoutY="39.0" prefHeight="44.0" prefWidth="237.0" promptText="Cherche médecin" style="-fx-background-radius: 1em; -fx-border-radius: 1em;">
+                        <TextField alignment="CENTER" layoutX="9.0" layoutY="24.0" prefHeight="44.0" prefWidth="237.0" promptText="Cherche médecin" style="-fx-background-radius: 1em; -fx-border-radius: 1em;">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -167,7 +168,7 @@
                         <Image url="@../controller/images/search.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="676.0" layoutY="16.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="196.0" style="-fx-background-color: #05c2d1; -fx-background-radius: 2em; -fx-border-radius: 2em;" text="ajouter qst" textFill="WHITE">
+                  <Button layoutX="660.0" layoutY="21.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="140.0" style="-fx-background-color: #05c2d1; -fx-background-radius: 2em; -fx-border-radius: 2em;" text="ajouter qst" textFill="WHITE">
                      <font>
                         <Font size="22.0" />
                      </font>

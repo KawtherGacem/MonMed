@@ -5,7 +5,7 @@
     -fx-border-color: -swatch-grey;
     -fx-border-width: 0 0 2 0;
     -fx-background-color: transparent;
-    -fx-font-size: 16;
+    -fx-font-size: 14;
    -fx-background-color: transparent;
 }
 
@@ -18,7 +18,7 @@
 .table-view .column-drag-header .label, .tree-table-view .column-header .label,
 .tree-table-view .filler .label, .tree-table-view .column-drag-header .label
 {
-    -fx-alignment: CENTER;
+    -fx-alignment: Left;
 }
 
 .table-view .column-header-background, .tree-table-view .column-header-background

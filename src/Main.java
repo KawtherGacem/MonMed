@@ -1,3 +1,5 @@
+package src;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +12,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("view/Acceuilmed.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("view/Inscriremed.fxml"));
         primaryStage.setTitle("Test");
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
@@ -18,9 +20,6 @@ public class Main extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("view/Css/Css.css")).toExternalForm());
     }
 
-
-
- 
     public static void main(String[] args) {
         launch(args);
     }
