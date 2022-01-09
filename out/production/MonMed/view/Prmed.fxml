@@ -40,7 +40,7 @@
       <AnchorPane layoutX="24.0" layoutY="176.0" prefHeight="1.0" prefWidth="179.0" style="-fx-background-color: #2b478b;" />
       <ImageView fitHeight="81.0" fitWidth="85.0" layoutX="258.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../controller/images/Sans%20titre%20-%201.png" />
+            <Image url="@images/Sans titre - 1.png" />
          </image>
       </ImageView>
       <Text layoutX="275.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dr." />
@@ -50,7 +50,7 @@
       <Text layoutX="55.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vote pour :" />
       <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="24.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../controller/images/Fichier%203xxxhdpi.png" />
+            <Image url="@images/like.png" />
          </image>
       </ImageView>
    </children>

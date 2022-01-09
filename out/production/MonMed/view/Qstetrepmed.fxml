@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1360.0" stylesheets="@Css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1360.0" stylesheets="@Css/Css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <BorderPane prefHeight="682.0" prefWidth="1304.0">
             <left>
@@ -24,7 +24,7 @@
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../controller/images/home.png" />
+                                        <Image url="@images/home.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -36,7 +36,7 @@
                             <graphic>
                                 <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../controller/images/profile.png" />
+                                        <Image url="@images/profile.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -48,7 +48,7 @@
                             <graphic>
                                 <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../controller/images/phone.png" />
+                                        <Image url="@images/phone.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -60,7 +60,7 @@
                             <graphic>
                                 <ImageView fitHeight="38.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../controller/images/exit.png" />
+                                        <Image url="@images/exit.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -82,13 +82,13 @@
                         </Text>
                         <ImageView fitHeight="92.0" fitWidth="86.0" layoutX="65.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../controller/images/Sans titre - 1.png" />
+                                <Image url="@images/Sans titre - 1.png" />
                             </image>
                         </ImageView>
                         <AnchorPane layoutX="-1.0" layoutY="-2.0" prefHeight="684.0" prefWidth="26.0" style="-fx-background-color: #223046;" />
                         <ImageView fitHeight="64.0" fitWidth="176.0" layoutX="35.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../controller/images/logo.png" />
+                                <Image url="@images/logo.png" />
                             </image>
                         </ImageView>
                     </children>
@@ -117,7 +117,7 @@
                                     <graphic>
                                         <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../controller/images/like.png" />
+                                                <Image url="@images/like.png" />
                                             </image>
                                         </ImageView>
                                     </graphic>
@@ -126,7 +126,7 @@
                                     <graphic>
                                         <ImageView fitHeight="32.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../controller/images/dislike.png" />
+                                                <Image url="@images/dislike.png" />
                                             </image>
                                         </ImageView>
                                     </graphic>
@@ -141,17 +141,17 @@
                         <AnchorPane layoutX="20.0" layoutY="60.0" prefHeight="2.0" prefWidth="482.0" style="-fx-background-color: #05c2d1;" />
                         <ImageView fitHeight="42.0" fitWidth="48.0" layoutX="812.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../controller/images/like.png" />
+                                <Image url="@images/like.png" />
                             </image>
                         </ImageView>
                         <ImageView fitHeight="42.0" fitWidth="48.0" layoutX="922.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../controller/images/dislike.png" />
+                                <Image url="@images/dislike.png" />
                             </image>
                         </ImageView>
                         <ImageView fitHeight="42.0" fitWidth="48.0" layoutX="1027.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../controller/images/comment.png" />
+                                <Image url="@images/comment.png" />
                             </image>
                         </ImageView>
                         <TextField alignment="TOP_LEFT" layoutX="906.0" layoutY="308.0" prefHeight="253.0" prefWidth="247.0" promptText="écrire votre réponce" style="-fx-background-radius: 1em; -fx-border-radius: 1em;">

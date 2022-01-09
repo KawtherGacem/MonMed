@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Point3D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,30 +12,37 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.inscriremal.Inscriremal">
+<AnchorPane prefHeight="475.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.login.SignUpMalController">
     <children>
-        <ImageView fitHeight="407.0" fitWidth="600.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="475.0" fitWidth="700.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <image>
-                <Image url="@../controller/images/inscrimal.png" />
+                <Image url="@images/inscrimal.png" />
             </image>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
         </ImageView>
-        <Text fill="#2b478b" layoutX="202.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="médecin" wrappingWidth="78.89453125">
+        <Text fill="#2b478b" layoutX="241.0" layoutY="189.0" onMouseClicked="#medecinOnClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Médecin" wrappingWidth="78.89453125">
             <font>
-                <Font size="20.0" />
+                <Font name="System Bold" size="19.0" />
             </font>
         </Text>
-        <Text fill="#2b478b" layoutX="323.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="malade" wrappingWidth="69.89453125">
+        <Text fill="#2b478b" layoutX="379.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Malade" wrappingWidth="69.89453125">
             <font>
-                <Font size="20.0" />
+                <Font size="19.0" />
             </font>
         </Text>
-        <TextField layoutX="104.0" layoutY="188.0" prefHeight="25.0" prefWidth="173.0" promptText="Nom" style="-fx-border-color: #05c2d1;" />
-        <TextField layoutX="104.0" layoutY="238.0" prefHeight="25.0" prefWidth="173.0" promptText="Nom utilisateur" style="-fx-border-color: #05c2d1;" />
-        <TextField layoutX="323.0" layoutY="238.0" prefHeight="25.0" prefWidth="62.0" promptText="Age" style="-fx-border-color: #05c2d1;" />
-        <TextField layoutX="323.0" layoutY="188.0" prefHeight="25.0" prefWidth="173.0" promptText="Prénom" style="-fx-border-color: #05c2d1;" />
-        <TextField layoutX="104.0" layoutY="292.0" prefHeight="25.0" prefWidth="173.0" promptText="Mot de passe" style="-fx-border-color: #05c2d1;" />
-        <TextField layoutX="323.0" layoutY="292.0" prefHeight="25.0" prefWidth="173.0" promptText="Confirmer" style="-fx-border-color: #05c2d1;" />
-        <ComboBox layoutX="397.0" layoutY="239.0" prefHeight="25.0" prefWidth="99.0" promptText="Specialité" style="-fx-background-color: transparent; -fx-border-color: #05c2d1;" />
-      <Button layoutX="256.0" layoutY="343.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #2b478b; -fx-background-radius: 5em; -fx-border-radius: 5em;" text="S'inscrire" textFill="WHITE" />
+        <TextField fx:id="nomTextField" layoutX="115.0" layoutY="239.0" prefHeight="30.0" prefWidth="210.0" promptText="Nom" style="-fx-border-color: #05c2d1;" />
+        <TextField fx:id="nomUtilisateurTextField" layoutX="115.0" layoutY="290.0" prefHeight="30.0" prefWidth="210.0" promptText="Nom utilisateur" style="-fx-border-color: #05c2d1;" />
+        <TextField fx:id="prenomTextField" layoutX="370.0" layoutY="239.0" prefHeight="30.0" prefWidth="210.0" promptText="Prénom" style="-fx-border-color: #05c2d1;" />
+        <TextField fx:id="motDePasseTextField" layoutX="115.0" layoutY="343.0" prefHeight="30.0" prefWidth="210.0" promptText="Mot de passe" style="-fx-border-color: #05c2d1;" />
+        <TextField fx:id="confirmerMotDePasseTextField" layoutX="370.0" layoutY="343.0" prefHeight="30.0" prefWidth="210.0" promptText="Confirmer" style="-fx-border-color: #05c2d1;" />
+        <ComboBox fx:id="sexeComboBox" layoutX="488.0" layoutY="290.0" prefHeight="30.0" prefWidth="92.0" promptText="Sexe" style="-fx-background-color: transparent; -fx-border-color: #05c2d1;" />
+      <Button fx:id="sinscrireBtn" layoutX="284.0" layoutY="408.0" mnemonicParsing="false" onAction="#sinscrireBtnOnClick" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #2b478b; -fx-background-radius: 5em; -fx-border-radius: 5em;" text="S'inscrire" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <DatePicker fx:id="datePicker" layoutX="370.0" layoutY="290.0" prefHeight="30.0" prefWidth="107.0" />
+      <Label fx:id="alertLabel" layoutX="186.0" layoutY="389.0" prefHeight="17.0" prefWidth="315.0" />
     </children>
 </AnchorPane>

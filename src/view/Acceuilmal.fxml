@@ -25,7 +25,7 @@
                      <graphic>
                         <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../controller/images/home.png" />
+                              <Image url="@images/home.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -40,7 +40,7 @@
                      <graphic>
                         <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../controller/images/profile.png" />
+                              <Image url="@images/profile.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -58,7 +58,7 @@
                      <graphic>
                         <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../controller/images/phone.png" />
+                              <Image url="@images/phone.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -70,7 +70,7 @@
                      <graphic>
                         <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../controller/images/exit.png" />
+                              <Image url="@images/exit.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -90,12 +90,12 @@
                   </Text>
                   <ImageView fitHeight="92.0" fitWidth="86.0" layoutX="53.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../controller/images/Sans titre - 1.png" />
+                        <Image url="@images/Sans titre - 1.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="72.0" fitWidth="164.0" layoutX="15.0" layoutY="626.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../controller/images/logo.png" />
+                        <Image url="@images/logo.png" />
                      </image>
                   </ImageView>
                </children>
@@ -112,7 +112,7 @@
                            <graphic>
                               <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../controller/images/like.png" />
+                                    <Image url="@images/like.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -121,7 +121,7 @@
                            <graphic>
                               <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../controller/images/dislike.png" />
+                                    <Image url="@images/dislike.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -148,7 +148,7 @@
                                  <graphic>
                                     <ImageView fitHeight="33.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../controller/images/like.png" />
+                                          <Image url="@images/like.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>
@@ -164,7 +164,7 @@
                   </AnchorPane>
                   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="594.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../controller/images/search.png" />
+                        <Image url="@images/search.png" />
                      </image>
                   </ImageView>
                   <Button layoutX="676.0" layoutY="16.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="196.0" style="-fx-background-color: #05c2d1; -fx-background-radius: 2em; -fx-border-radius: 2em;" text="ajouter qst" textFill="WHITE">
