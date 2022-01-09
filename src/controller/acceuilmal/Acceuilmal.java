@@ -109,7 +109,6 @@ public class Acceuilmal implements Initializable {
         questionsTableView.setRoot(root);
         questionsTableView.setShowRoot(false);
 
-//        questionsTableView.setOnMouseClicked();
     }
 
     @FXML

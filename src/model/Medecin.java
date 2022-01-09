@@ -25,6 +25,11 @@ public class Medecin {
         this.adresseTravail = adresseTravail;
     }
 
+    public Medecin(String username, String specialite) {
+        this.username = username;
+        this.specialite = specialite;
+    }
+
     public int getId() {
         return id;
     }

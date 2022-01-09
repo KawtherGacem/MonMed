@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXListView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -104,83 +104,58 @@
          <center>
             <AnchorPane prefHeight="600.0" prefWidth="1051.0" style="-fx-background-color: #ebedf3;" BorderPane.alignment="CENTER">
                <children>
-                  <Button layoutX="602.0" layoutY="18.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="66.0" style="-fx-background-color: transparent;" />
-                  <Text fill="#223046" layoutX="25.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Réponces :">
+                  <Text fill="#223046" layoutX="40.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Réponses :" AnchorPane.leftAnchor="40.0">
                      <font>
                         <Font size="27.0" />
                      </font>
                   </Text>
-                  <TableView layoutX="19.0" layoutY="256.0" prefHeight="410.0" prefWidth="848.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-background-color: transparent;">
-                     <columns>
-                        <TableColumn prefWidth="395.0" />
-                        <TableColumn prefWidth="123.0" text="Nom " />
-                        <TableColumn prefWidth="129.0" text="Spécialité" />
-                        <TableColumn prefWidth="93.0" text="upvotes">
-                           <graphic>
-                              <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../controller/images/like.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </TableColumn>
-                        <TableColumn prefWidth="107.0" text="downvotes">
-                           <graphic>
-                              <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../controller/images/dislike.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </TableColumn>
-                     </columns>
-                  </TableView>
                   <AnchorPane layoutX="26.0" layoutY="60.0" prefHeight="2.0" prefWidth="482.0" style="-fx-background-color: #05c2d1;" />
-                  <ImageView fitHeight="42.0" fitWidth="48.0" layoutX="700.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../controller/images/like.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="42.0" fitWidth="48.0" layoutX="815.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../controller/images/dislike.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="42.0" fitWidth="48.0" layoutX="932.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../controller/images/comment.png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="754.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="54.13671875">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="873.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="54.13671875">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="988.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="54.13671875">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Text>
-                  <ImageView fitHeight="398.0" fitWidth="150.0" layoutX="913.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../controller/images/tbib.png" />
-                     </image>
-                  </ImageView>
-                  <Text fx:id="titreText" layoutX="27.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titre de question">
+                  <HBox layoutX="757.0" layoutY="270.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="42.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/like.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="54.13671875">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="42.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/dislike.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="54.13671875">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="42.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/comment.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="54.13671875">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Text fx:id="titreText" layoutX="27.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titre de question" AnchorPane.leftAnchor="40.0">
                      <font>
                         <Font size="31.0" />
                      </font>
                   </Text>
-                  <Text fx:id="questionText" layoutX="25.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="995.4701461791992">
+                  <AnchorPane layoutX="23.0" layoutY="77.0" prefHeight="185.0" prefWidth="1032.0" style="-fx-background-color: white; -fx-background-radius: 20px;" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <Text fx:id="questionText" layoutX="33.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text=";efwefkwef wefijwoe wefije" wrappingWidth="992.8034591674805" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="38.0" />
+                        <Font size="28.0" />
                      </font>
                   </Text>
+                  <JFXListView layoutX="31.0" layoutY="327.0" prefHeight="252.0" prefWidth="710.0" />
                </children>
             </AnchorPane>
          </center>

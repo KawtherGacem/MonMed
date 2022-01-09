@@ -20,6 +20,13 @@ public class Reponse {
         this.image = image;
     }
 
+    public Reponse(String text, int up, int down ,int idMedecin) {
+        this.text = text;
+        this.up = up;
+        this.down = down;
+        this.idMedecin = idMedecin;
+    }
+
     public int getId() {
         return id;
     }

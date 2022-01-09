@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -107,30 +106,6 @@
          <center>
             <AnchorPane prefHeight="679.0" prefWidth="1093.0" style="-fx-background-color: #ebedf3;" BorderPane.alignment="CENTER">
                <children>
-                  <TableView layoutX="19.0" layoutY="154.0" prefHeight="512.0" prefWidth="770.0" style="-fx-background-color: transparent;" stylesheets="@Css/Css.css">
-                     <columns>
-                        <TableColumn prefWidth="428.0" text="Titre de question" />
-                        <TableColumn prefWidth="125.0" text="Spécialité" />
-                        <TableColumn prefWidth="106.0" text="upvotes">
-                           <graphic>
-                              <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../controller/images/like.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </TableColumn>
-                        <TableColumn prefWidth="110.0" text="downvotes">
-                           <graphic>
-                              <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../controller/images/dislike.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </TableColumn>
-                     </columns>
-                  </TableView>
                   <TextField layoutX="17.0" layoutY="17.0" prefHeight="51.0" prefWidth="573.0" promptText="Chercher une question" style="-fx-background-radius: 1em; -fx-border-radius: 1em;">
                      <font>
                         <Font size="20.0" />
@@ -144,25 +119,12 @@
                   </Text>
                   <AnchorPane layoutX="825.0" layoutY="-2.0" prefHeight="683.0" prefWidth="262.0" style="-fx-background-color: #ffff;">
                      <children>
-                        <TableView layoutX="16.0" layoutY="104.0" prefHeight="398.0" prefWidth="230.0" style="-fx-background-color: transparent;" stylesheets="@Css/Css.css">
-                           <columns>
-                              <TableColumn prefWidth="185.0" text="Nom" />
-                              <TableColumn prefWidth="66.0">
-                                 <graphic>
-                                    <ImageView fitHeight="33.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../controller/images/like.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </TableColumn>
-                           </columns>
-                        </TableView>
                         <TextField alignment="CENTER" layoutX="9.0" layoutY="24.0" prefHeight="44.0" prefWidth="237.0" promptText="Cherche médecin" style="-fx-background-radius: 1em; -fx-border-radius: 1em;">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </TextField>
+                        <JFXTreeTableView fx:id="medecinsTableView" layoutX="24.0" layoutY="152.0" prefHeight="484.0" prefWidth="210.0" />
                      </children>
                   </AnchorPane>
                   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="594.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
@@ -170,6 +132,7 @@
                         <Image url="@../controller/images/search.png" />
                      </image>
                   </ImageView>
+                  <JFXTreeTableView fx:id="questionsTableView" layoutX="20.0" layoutY="145.0" prefHeight="509.0" prefWidth="754.0" />
                </children>
             </AnchorPane>
          </center>
