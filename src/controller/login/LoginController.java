@@ -57,14 +57,17 @@ public class LoginController {
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
-                stage.setFullScreen(true);
+                stage.setY(0);
+                stage.setX(0);
+
                 stage.show();
             }else if(CurrentUser.currentUserType.equals("medecin")) {
                 Parent root = FXMLLoader.load(getClass().getResource("../../view/Acceuilmed.fxml"));
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
-                stage.setFullScreen(true);
+                stage.setY(0);
+                stage.setX(0);
                 stage.show();
             }
             System.out.println(CurrentUser.currentUserType);
