@@ -10,13 +10,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="1280.0" stylesheets="@Css/Css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="1280.0" stylesheets="@Css/Css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.poserqst.Poserqst">
    <children>
       <BorderPane prefHeight="679.0" prefWidth="1280.0">
          <left>
             <AnchorPane prefHeight="669.0" prefWidth="193.0" style="-fx-background-color: #ffff;" stylesheets="@Css/button.css" BorderPane.alignment="CENTER">
                <children>
-                  <Button layoutX="-3.0" layoutY="217.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="194.0" text="Acceuil" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Button layoutX="-3.0" layoutY="217.0" mnemonicParsing="false" onAction="#acceuilOnClick" prefHeight="44.0" prefWidth="194.0" text="Acceuil" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <font>
                         <Font size="23.0" />
                      </font>
@@ -31,7 +31,7 @@
                         <Insets left="-7.0" />
                      </padding>
                   </Button>
-                  <Button layoutY="313.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="192.0" text="Profile" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Button layoutY="313.0" mnemonicParsing="false" onAction="#profileOnClick" prefHeight="44.0" prefWidth="192.0" text="Profile" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <font>
                         <Font size="23.0" />
                      </font>
@@ -46,7 +46,7 @@
                         <Insets left="-9.0" />
                      </padding>
                   </Button>
-                  <Button layoutX="-3.0" layoutY="396.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="196.0" text="Contact" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Button layoutX="-3.0" layoutY="396.0" mnemonicParsing="false" onAction="#contactOnClick" prefHeight="46.0" prefWidth="196.0" text="Contact" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <font>
                         <Font size="23.0" />
                      </font>
@@ -61,7 +61,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button alignment="CENTER" layoutX="-1.0" layoutY="477.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="193.0" text="Exit" textFill="#05c2d1" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+                  <Button alignment="CENTER" layoutX="-1.0" layoutY="477.0" mnemonicParsing="false" onAction="#exitOnClick" prefHeight="44.0" prefWidth="193.0" text="Exit" textFill="#05c2d1" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
                      <font>
                         <Font size="23.0" />
                      </font>
@@ -105,19 +105,19 @@
                <children>
                   <AnchorPane layoutX="-1.0" layoutY="-2.0" prefHeight="684.0" prefWidth="1087.0" style="-fx-background-color: #ebedf3;">
                      <children>
-                        <TextField alignment="TOP_LEFT" layoutX="15.0" layoutY="129.0" prefHeight="275.0" prefWidth="1051.0" promptText="Votre question" style="-fx-background-radius: 1em; -fx-border-radius: 1em;">
+                        <TextField fx:id="questionTextField" alignment="TOP_LEFT" layoutX="15.0" layoutY="129.0" prefHeight="275.0" prefWidth="1051.0" promptText="Votre question" style="-fx-background-radius: 1em; -fx-border-radius: 1em;">
                            <font>
                               <Font size="36.0" />
                            </font>
                         </TextField>
                         <Button layoutX="602.0" layoutY="18.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="66.0" style="-fx-background-color: transparent;" />
-                        <TextField layoutX="7.0" layoutY="38.0" prefHeight="49.0" prefWidth="433.0" promptText="Titre de votre question" style="-fx-background-color: transparent;" text="Titre de votre question">
+                        <TextField fx:id="titreQuestionTextField" layoutX="19.0" layoutY="41.0" prefHeight="58.0" prefWidth="503.0" promptText="Titre de votre question" style="-fx-background-color: transparent;" text="Titre de votre question">
                            <font>
                               <Font size="27.0" />
                            </font>
                         </TextField>
                         <AnchorPane layoutX="20.0" layoutY="89.0" prefHeight="2.0" prefWidth="482.0" style="-fx-background-color: #05c2d1;" />
-                        <Button layoutX="857.0" layoutY="423.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="206.0" style="-fx-background-color: #05c2d1; -fx-background-radius: 2em; -fx-border-radius: 2em;" text="Publier" textFill="WHITE">
+                        <Button fx:id="publierBtn" layoutX="857.0" layoutY="423.0" mnemonicParsing="false" onAction="#publierBtnOnClick" prefHeight="61.0" prefWidth="206.0" style="-fx-background-color: #05c2d1; -fx-background-radius: 2em; -fx-border-radius: 2em;" text="Publier" textFill="WHITE">
                            <font>
                               <Font size="28.0" />
                            </font>

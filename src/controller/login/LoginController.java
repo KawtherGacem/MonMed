@@ -53,6 +53,7 @@ public class LoginController {
     void connecterBtnOnClick(ActionEvent event) throws IOException {
         if(logIn(nomUtilisateur.getText().trim(),motDePasse.getText()).equals("success")){
             if (CurrentUser.currentUserType.equals("malade")) {
+                System.out.println(CurrentUser.currentUserId);
                 Parent root = FXMLLoader.load(getClass().getResource("../../view/Acceuilmal.fxml"));
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);

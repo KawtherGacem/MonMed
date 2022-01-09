@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="1280.0" stylesheets="@Css/Css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.contact.Contact">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="1280.0" stylesheets="@Css/Css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.contact.Contact2">
     <children>
         <BorderPane prefHeight="679.0" prefWidth="1280.0">
             <left>
@@ -61,9 +61,9 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button alignment="CENTER" layoutX="-1.0" layoutY="477.0" mnemonicParsing="false" onAction="#exitOnClick" prefHeight="44.0" prefWidth="193.0" text="Exit" textFill="#05c2d1" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+                        <Button layoutY="477.0" mnemonicParsing="false" onAction="#exitOnClick" prefHeight="44.0" prefWidth="193.0" text="Exit" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                             <font>
-                                <Font size="23.0" />
+                                <Font size="22.0" />
                             </font>
                             <graphic>
                                 <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
@@ -72,9 +72,6 @@
                                     </image>
                                 </ImageView>
                             </graphic>
-                            <opaqueInsets>
-                                <Insets left="16.0" />
-                            </opaqueInsets>
 
                         </Button>
                         <Text fill="#223046" layoutX="32.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Nom " wrappingWidth="129.09700393676758">
@@ -97,6 +94,11 @@
                                 <Image url="@../controller/images/logo.png" />
                             </image>
                         </ImageView>
+                  <Text fill="#223046" layoutX="2.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="spécialitée" wrappingWidth="192.33334350585938">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
                     </children>
                 </AnchorPane>
             </left>

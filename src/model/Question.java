@@ -27,6 +27,21 @@ public class Question extends RecursiveTreeObject<Question> {
         this.idMalade = idMalade;
     }
 
+    public Question(int id ,String titre, int up, int down) {
+        this.id = id;
+        this.titre = titre;
+        this.up = up;
+        this.down = down;
+    }
+
+    public Question(int id, String titre, String text, int up, int down) {
+        this.id = id;
+        this.titre = titre;
+        this.text = text;
+        this.up = up;
+        this.down = down;
+    }
+
 
     public int getId() {
         return id;
@@ -36,9 +51,7 @@ public class Question extends RecursiveTreeObject<Question> {
         this.id = id;
     }
 
-    public String getTitre() {
-        return titre;
-    }
+
 
     public void setTitre(String titre) {
         this.titre = titre;
@@ -82,5 +95,9 @@ public class Question extends RecursiveTreeObject<Question> {
 
     public void setIdMalade(int idMalade) {
         this.idMalade = idMalade;
+    }
+
+    public String getTitre() {
+        return titre;
     }
 }

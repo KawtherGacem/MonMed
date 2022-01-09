@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,13 +11,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="1280.0" stylesheets="@Css/Css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="1280.0" stylesheets="@Css/Css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.acceuilmal.Acceuilmal">
    <children>
       <BorderPane prefHeight="679.0" prefWidth="1280.0">
          <left>
             <AnchorPane prefHeight="669.0" prefWidth="193.0" style="-fx-background-color: #ffff;" stylesheets="@Css/button.css" BorderPane.alignment="CENTER">
                <children>
-                  <Button layoutX="-3.0" layoutY="217.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="194.0" text="Acceuil" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Button layoutX="-3.0" layoutY="217.0" mnemonicParsing="false" onAction="#acceuilOnClick" prefHeight="44.0" prefWidth="194.0" text="Acceuil" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <font>
                         <Font size="23.0" />
                      </font>
@@ -33,7 +32,7 @@
                         <Insets left="-7.0" />
                      </padding>
                   </Button>
-                  <Button layoutY="313.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="192.0" text="Profile" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Button layoutY="313.0" mnemonicParsing="false" onAction="#profileOnClick" prefHeight="44.0" prefWidth="192.0" text="Profile" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <font>
                         <Font size="23.0" />
                      </font>
@@ -48,7 +47,7 @@
                         <Insets left="-9.0" />
                      </padding>
                   </Button>
-                  <Button layoutX="-3.0" layoutY="396.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="196.0" text="Contact" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Button layoutX="-3.0" layoutY="396.0" mnemonicParsing="false" onAction="#contactOnClick" prefHeight="46.0" prefWidth="196.0" text="Contact" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <font>
                         <Font size="23.0" />
                      </font>
@@ -63,7 +62,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button alignment="CENTER" layoutX="-1.0" layoutY="477.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="193.0" text="Exit" textFill="#05c2d1" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+                  <Button alignment="CENTER" layoutX="-1.0" layoutY="477.0" mnemonicParsing="false" onAction="#exitOnClick" prefHeight="44.0" prefWidth="193.0" text="Exit" textFill="#05c2d1" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
                      <font>
                         <Font size="23.0" />
                      </font>
@@ -105,31 +104,7 @@
          <center>
             <AnchorPane prefHeight="679.0" prefWidth="1093.0" style="-fx-background-color: #ebedf3;" BorderPane.alignment="CENTER">
                <children>
-                  <TableView layoutX="19.0" layoutY="154.0" prefHeight="512.0" prefWidth="770.0" style="-fx-background-color: transparent;" stylesheets="@Css/Css.css">
-                     <columns>
-                        <TableColumn prefWidth="428.0" text="Titre de question" />
-                        <TableColumn prefWidth="125.0" text="Spécialité" />
-                        <TableColumn prefWidth="106.0" text="upvotes">
-                           <graphic>
-                              <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@images/like.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </TableColumn>
-                        <TableColumn prefWidth="110.0" text="downvotes">
-                           <graphic>
-                              <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@images/dislike.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </TableColumn>
-                     </columns>
-                  </TableView>
-                  <TextField layoutX="17.0" layoutY="17.0" prefHeight="51.0" prefWidth="573.0" promptText="Chercher une question" style="-fx-background-radius: 1em; -fx-border-radius: 1em;">
+                  <TextField fx:id="rechercheQstTextField" layoutX="17.0" layoutY="17.0" prefHeight="51.0" prefWidth="573.0" promptText="Chercher une question" style="-fx-background-radius: 1em; -fx-border-radius: 1em;">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -142,25 +117,12 @@
                   </Text>
                   <AnchorPane layoutX="825.0" layoutY="-2.0" prefHeight="683.0" prefWidth="262.0" style="-fx-background-color: #ffff;">
                      <children>
-                        <TableView layoutX="16.0" layoutY="104.0" prefHeight="398.0" prefWidth="230.0" style="-fx-background-color: transparent;" stylesheets="@Css/Css.css">
-                           <columns>
-                              <TableColumn prefWidth="185.0" text="Nom" />
-                              <TableColumn prefWidth="66.0">
-                                 <graphic>
-                                    <ImageView fitHeight="33.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@images/like.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </TableColumn>
-                           </columns>
-                        </TableView>
-                        <TextField alignment="CENTER" layoutX="9.0" layoutY="24.0" prefHeight="44.0" prefWidth="237.0" promptText="Cherche médecin" style="-fx-background-radius: 1em; -fx-border-radius: 1em;">
+                        <TextField fx:id="rechercheMedecinTextField" alignment="CENTER" layoutX="9.0" layoutY="24.0" prefHeight="44.0" prefWidth="237.0" promptText="Chercher un médecin" style="-fx-background-radius: 1em; -fx-border-radius: 1em;">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </TextField>
+                        <JFXTreeTableView fx:id="medecinsTableView" layoutX="12.0" layoutY="97.0" prefHeight="504.0" prefWidth="238.0" />
                      </children>
                   </AnchorPane>
                   <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="594.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
@@ -168,11 +130,12 @@
                         <Image url="@images/search.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="660.0" layoutY="21.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="140.0" style="-fx-background-color: #05c2d1; -fx-background-radius: 2em; -fx-border-radius: 2em;" text="ajouter qst" textFill="WHITE">
+                  <Button fx:id="poserQstBtn" layoutX="660.0" layoutY="21.0" mnemonicParsing="false" onAction="#poserQstOnClick" prefHeight="43.0" prefWidth="140.0" style="-fx-background-color: #05c2d1; -fx-background-radius: 2em; -fx-border-radius: 2em;" text="Poser Qst" textFill="WHITE">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Button>
+                  <JFXTreeTableView fx:id="questionsTableView" layoutX="21.0" layoutY="151.0" prefHeight="496.0" prefWidth="780.0" />
                </children>
             </AnchorPane>
          </center>
