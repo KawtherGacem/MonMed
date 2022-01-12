@@ -15,6 +15,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import utils.DBConnection;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -53,7 +54,10 @@ public class SignUpMalController implements Initializable {
     private Button sinscrireBtn;
 
     @FXML
-    private DatePicker datePicker;
+    private Button backBtn;
+
+    @FXML
+    private DatePicker datePicker = new DatePicker();
     @FXML
     void medecinOnClick(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../../view/Inscriremed.fxml"));
@@ -126,7 +130,7 @@ public class SignUpMalController implements Initializable {
                         } else {
 
                             String sql1 = "select * from malades where nom_utilisateur_malade = ?";
-                            String sql2 = "select * from medecins where nom_utilisateur_malade = ?";
+                            String sql2 = "select * from medecins where nom_utilisateur_medecin = ?";
                             PreparedStatement preparedStatement1 = c.prepareStatement(sql1);
                             PreparedStatement preparedStatement2 = c.prepareStatement(sql2);
 
@@ -163,5 +167,13 @@ public class SignUpMalController implements Initializable {
         return status;
     }
 
+    @FXML
+    void backBtnOnClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../../view/Login.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 }

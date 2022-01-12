@@ -25,7 +25,7 @@
                             <graphic>
                                 <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../controller/images/home.png" />
+                                        <Image url="@images/home.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -40,7 +40,7 @@
                             <graphic>
                                 <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../controller/images/profile.png" />
+                                        <Image url="@images/profile.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -58,52 +58,50 @@
                             <graphic>
                                 <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../controller/images/phone.png" />
+                                        <Image url="@images/phone.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button alignment="CENTER" layoutX="-1.0" layoutY="477.0" mnemonicParsing="false" onAction="#exitOnClick" prefHeight="44.0" prefWidth="193.0" text="Exit" textFill="#05c2d1" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+                        <Button alignment="CENTER" layoutX="-1.0" layoutY="477.0" mnemonicParsing="false" onAction="#exitOnClick" prefHeight="44.0" prefWidth="193.0" text="Exit" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                             <font>
                                 <Font size="23.0" />
                             </font>
                             <graphic>
                                 <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../controller/images/exit.png" />
+                                        <Image url="@images/exit.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
                             <opaqueInsets>
                                 <Insets left="16.0" />
                             </opaqueInsets>
+                            <padding>
+                                <Insets right="32.0" />
+                            </padding>
 
                         </Button>
-                        <Text fill="#223046" layoutX="32.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Nom " wrappingWidth="129.09700393676758">
+                        <Text fill="#223046" layoutX="32.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Torki" wrappingWidth="129.09700393676758">
                             <font>
                                 <Font size="20.0" />
                             </font>
                         </Text>
-                        <Text fill="#223046" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="du médecin" wrappingWidth="192.33334350585938">
+                        <Text fill="#223046" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Meriem Amira" wrappingWidth="192.33334350585938">
                             <font>
                                 <Font size="20.0" />
                             </font>
                         </Text>
                         <ImageView fitHeight="92.0" fitWidth="86.0" layoutX="53.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../controller/images/Sans titre - 1.png" />
+                                <Image url="@images/user.png" />
                             </image>
                         </ImageView>
-                        <ImageView fitHeight="72.0" fitWidth="164.0" layoutX="16.0" layoutY="585.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="72.0" fitWidth="164.0" layoutX="16.0" layoutY="567.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../controller/images/logo.png" />
+                                <Image url="@images/logo.png" />
                             </image>
                         </ImageView>
-                  <Text fill="#223046" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="spécialité" wrappingWidth="192.33334350585938">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Text>
                     </children>
                 </AnchorPane>
             </left>
@@ -120,25 +118,25 @@
                         </TextField>
                         <ImageView fitHeight="42.0" fitWidth="40.0" layoutX="43.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../controller/images/like.png" />
+                              <Image url="@images/like.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="39.0" layoutY="621.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="39.0" layoutY="612.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../controller/images/dislike.png" />
+                              <Image url="@images/dislike.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="42.0" fitWidth="48.0" layoutX="38.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../controller/images/comment.png" />
+                              <Image url="@images/comment.png" />
                            </image>
                         </ImageView>
-                        <Text layoutX="228.0" layoutY="645.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="54.13671875">
+                        <Text layoutX="228.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="54.13671875">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Text>
-                        <Text layoutX="215.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="54.13671875">
+                        <Text layoutX="215.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25" wrappingWidth="54.13671875">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -168,8 +166,8 @@
                               <Font size="28.0" />
                            </font>
                         </TextField>
-                        <ComboBox layoutX="409.0" layoutY="251.0" prefHeight="57.0" prefWidth="291.0" promptText="Specialité" style="-fx-background-color: transparent;" stylesheets="@Css/button.css" visibleRowCount="18" />
-                        <ComboBox layoutX="147.0" layoutY="251.0" prefHeight="57.0" prefWidth="209.0" promptText="sexe" style="-fx-background-color: transparent;" stylesheets="@Css/button.css" visibleRowCount="18" />
+                        <ComboBox layoutX="409.0" layoutY="251.0" prefHeight="57.0" prefWidth="291.0" promptText="Specialité" style="-fx-background-color: transparent; -fx-font-size: 28px;" stylesheets="@Css/button.css" visibleRowCount="18" />
+                        <ComboBox layoutX="147.0" layoutY="251.0" prefHeight="57.0" prefWidth="209.0" promptText="sexe" style="-fx-background-color: transparent; -fx-font-size: 28px;" stylesheets="@Css/button.css" visibleRowCount="18" />
                         <TextField alignment="TOP_LEFT" layoutX="408.0" layoutY="339.0" prefHeight="58.0" prefWidth="403.0" promptText="email" style="-fx-background-color: transparent;" text="adresse de travail/wilaya">
                            <font>
                               <Font size="28.0" />
@@ -191,9 +189,9 @@
                               <Font size="34.0" />
                            </font>
                         </Text>
-                        <ImageView fitHeight="243.0" fitWidth="287.0" layoutX="779.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="133.0" fitWidth="194.0" layoutX="826.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../controller/images/tjor.png" />
+                              <Image url="@images/zwa9.png" />
                            </image>
                         </ImageView>
                         <Button layoutX="820.0" layoutY="346.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="206.0" style="-fx-background-color: #05c2d1; -fx-background-radius: 2em; -fx-border-radius: 2em;" text="modifier" textFill="WHITE">
@@ -201,18 +199,18 @@
                               <Font size="26.0" />
                            </font>
                         </Button>
-                        <Text layoutX="500.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Réputation :">
+                        <Text layoutX="500.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Réputation :">
                            <font>
                               <Font size="34.0" />
                            </font>
                         </Text>
-                        <ProgressBar layoutX="504.0" layoutY="596.0" prefHeight="76.0" prefWidth="556.0" progress="0.0" />
+                        <ProgressBar layoutX="504.0" layoutY="596.0" prefHeight="47.0" prefWidth="547.0" progress="0.0" />
                         <Text layoutX="92.0" layoutY="586.0" strokeType="OUTSIDE" strokeWidth="0.0" text="vote pour :">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Text layoutX="90.0" layoutY="646.0" strokeType="OUTSIDE" strokeWidth="0.0" text="vote contre :">
+                        <Text layoutX="90.0" layoutY="636.0" strokeType="OUTSIDE" strokeWidth="0.0" text="vote contre :">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -230,24 +228,25 @@
                         <AnchorPane layoutX="39.0" layoutY="305.0" prefHeight="2.0" prefWidth="95.0" style="-fx-background-color: #2b478b;" />
                         <ImageView fitHeight="60.0" fitWidth="72.0" layoutX="997.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../controller/images/mokh.png" />
+                              <Image url="@images/mokh.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="60.0" fitWidth="72.0" layoutX="849.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../controller/images/1er.png" />
+                              <Image url="@images/1er.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="60.0" fitWidth="72.0" layoutX="698.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../controller/images/2eme.png" />
+                              <Image url="@images/2eme.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="60.0" fitWidth="72.0" layoutX="551.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../controller/images/3eme.png" />
+                              <Image url="@images/3eme.png" />
                            </image>
                         </ImageView>
+                        <AnchorPane layoutX="506.0" layoutY="596.0" prefHeight="45.0" prefWidth="171.0" style="-fx-background-color: #05c2d1; -fx-background-radius: 2px;" />
                      </children>
                   </AnchorPane>
                     </children>

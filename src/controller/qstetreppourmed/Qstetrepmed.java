@@ -5,10 +5,14 @@ import com.jfoenix.controls.JFXListView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Alert;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -16,6 +20,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import model.Medecin;
 import model.Question;
 import model.Reponse;
@@ -23,11 +28,19 @@ import utils.CurrentUser;
 import utils.DBConnection;
 
 import java.awt.*;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class Qstetrepmed implements Initializable {
+
+    @FXML
+    private Text questionText;
+
+    @FXML
+    private Text titreText;
 
     @FXML
     private Button repondreBtn;
@@ -39,6 +52,30 @@ public class Qstetrepmed implements Initializable {
     private JFXListView<HBox> reponsesListView = new JFXListView<HBox>();
 
     public void initialize (URL location, ResourceBundle resources) {
+
+
+        try (Connection c = DBConnection.getConnection()){
+            String query = "SELECT * FROM questions where IDquestion = (?)";
+            PreparedStatement statement = c.prepareStatement(query);
+            statement.setInt(1, CurrentUser.questionId);
+            ResultSet rs = statement.executeQuery();
+            Question question;
+
+            while(rs.next()){
+                question = new Question(
+                        rs.getInt("IDquestion"),
+                        rs.getString("titre_question"),
+                        rs.getString("text_question"),
+                        rs.getInt("up"),
+                        rs.getInt("down"));
+                titreText.setText(question.getTitre());
+                questionText.setText(question.getText());
+            }
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+
+
         reponsesListView.setExpanded(true);
         reponsesListView.depthProperty().set(1);
         String sqlQuery = "SELECT * FROM reponses";
@@ -62,6 +99,30 @@ public class Qstetrepmed implements Initializable {
             ex.printStackTrace();
         }
     }
+
+    public void updateReponse(){
+        String sqlQuery = "SELECT * FROM reponses";
+
+        try (Connection c = DBConnection.getConnection()) {
+            Statement st = c.createStatement();
+            ResultSet rs = st.executeQuery(sqlQuery);
+            Reponse reponse;
+
+            while (rs.next()) {
+                reponse = new Reponse(
+                        rs.getString("text_reponse"),
+                        rs.getInt("up"),
+                        rs.getInt("down"),
+                        rs.getInt("IDmedecin")
+                );
+
+                createHbox(reponse,getMedecin(reponse.getIdMedecin()));
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
     public Medecin getMedecin(int idMedecin) throws SQLException {
         Medecin medecin = null;
 
@@ -86,6 +147,7 @@ public class Qstetrepmed implements Initializable {
         System.out.println(medecin.getUsername());
         nomUtilisateur.setFont(new Font("system",20));
         Text specialite =new Text(medecin.getSpecialite());
+        nomUtilisateur.setFont(new Font("system",10));
         VBox vbox = new VBox();
         vbox.getChildren().addAll(nomUtilisateur,specialite);
 
@@ -93,6 +155,7 @@ public class Qstetrepmed implements Initializable {
 
         Text textlabel = new Text(reponse.getText());
         textlabel.setFont(new Font("System",20));
+        textlabel.setStrokeWidth(200);
 
         Label upLabel = new Label(String.valueOf(reponse.getUp()));
         upLabel.setPrefSize(50,70);
@@ -100,38 +163,7 @@ public class Qstetrepmed implements Initializable {
         upLabel.setBackground(new Background(new BackgroundFill(Color.ALICEBLUE, CornerRadii.EMPTY, Insets.EMPTY)));
         upLabel.setFont(new Font("System",20));
 
-        JFXButton upBtn = new JFXButton("up");
-        JFXButton downBtn = new JFXButton("down");
 
-        upBtn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
-//                khasni min ndrouk tjib id ta3 reponse bach tdir upvote liha
-                Connection c = DBConnection.getConnection();
-                String query = "UPDATE reponses SET up = (?) WHERE IDreponse = (?)";
-                PreparedStatement statement = null;
-                try {
-                    statement = c.prepareStatement(query);
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                }
-                try {
-                    statement.setInt(1, +1);
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                }
-                try {
-                    ResultSet rs = statement.executeQuery();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                }
-            }
-        });
-
-        upBtn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
-
-            }
-        });
 
         Label downLabel = new Label(String.valueOf(reponse.getDown()));
         downLabel.setPrefSize(50,70);
@@ -142,7 +174,7 @@ public class Qstetrepmed implements Initializable {
 
         HBox hbox = new HBox();
         hbox.setMaxHeight(50); hbox.setMaxWidth(400);
-        hbox.getChildren().addAll(vbox,textlabel,upLabel,downLabel,upBtn,downBtn);
+        hbox.getChildren().addAll(vbox,textlabel,upLabel,downLabel);
         HBox.setHgrow(textlabel, Priority.ALWAYS);
 
 
@@ -155,6 +187,7 @@ public class Qstetrepmed implements Initializable {
     @FXML
     void repondreBtnOnClick(ActionEvent event) {
         addReponse(reponseTextField.getText(),CurrentUser.currentUserId, CurrentUser.questionId);
+        updateReponse();
 
     }
     public void addReponse(String text , int idMedecin ,int idQuestion) {
@@ -179,6 +212,43 @@ public class Qstetrepmed implements Initializable {
                 e.printStackTrace();
                 System.out.println(e.getMessage());
             }
+        }
+    }
+    public void acceuilOnClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../../view/Acceuilmed.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void profileOnClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../../view/Profilemed.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void contactOnClick(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../../view/Contact2.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    public void exitOnClick(ActionEvent event) {
+        Alert alert =new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirm exit");
+        alert.setHeaderText(null);
+        alert.setContentText("Do you really want to exit?");
+        Optional<ButtonType> action =alert.showAndWait();
+
+        if (action.get()==ButtonType.OK){
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.close();
         }
     }
 

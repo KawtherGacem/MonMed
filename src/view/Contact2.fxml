@@ -23,7 +23,7 @@
                             <graphic>
                                 <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../controller/images/home.png" />
+                                        <Image url="@images/home.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -38,7 +38,7 @@
                             <graphic>
                                 <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../controller/images/profile.png" />
+                                        <Image url="@images/profile.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -56,56 +56,57 @@
                             <graphic>
                                 <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../controller/images/phone.png" />
+                                        <Image url="@images/phone.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button layoutY="477.0" mnemonicParsing="false" onAction="#exitOnClick" prefHeight="44.0" prefWidth="193.0" text="Exit" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <Button alignment="CENTER" layoutX="-1.0" layoutY="477.0" mnemonicParsing="false" onAction="#exitOnClick" prefHeight="44.0" prefWidth="193.0" text="Exit" textFill="#05c2d1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                             <font>
-                                <Font size="22.0" />
+                                <Font size="23.0" />
                             </font>
                             <graphic>
                                 <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../controller/images/exit.png" />
+                                        <Image url="@images/exit.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
+                            <opaqueInsets>
+                                <Insets left="16.0" />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets right="32.0" />
+                            </padding>
 
                         </Button>
-                        <Text fill="#223046" layoutX="32.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Nom " wrappingWidth="129.09700393676758">
+                        <Text fill="#223046" layoutX="32.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Torki" wrappingWidth="129.09700393676758">
                             <font>
                                 <Font size="20.0" />
                             </font>
                         </Text>
-                        <Text fill="#223046" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="du  malade" wrappingWidth="192.33334350585938">
+                        <Text fill="#223046" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Meriem Amira" wrappingWidth="192.33334350585938">
                             <font>
                                 <Font size="20.0" />
                             </font>
                         </Text>
                         <ImageView fitHeight="92.0" fitWidth="86.0" layoutX="53.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../controller/images/Sans titre - 1.png" />
+                                <Image url="@images/user.png" />
                             </image>
                         </ImageView>
-                        <ImageView fitHeight="72.0" fitWidth="164.0" layoutX="16.0" layoutY="585.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="72.0" fitWidth="164.0" layoutX="16.0" layoutY="567.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../controller/images/logo.png" />
+                                <Image url="@images/logo.png" />
                             </image>
                         </ImageView>
-                  <Text fill="#223046" layoutX="2.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="spécialitée" wrappingWidth="192.33334350585938">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Text>
                     </children>
                 </AnchorPane>
             </left>
             <center>
                 <AnchorPane prefHeight="679.0" prefWidth="1.0" style="-fx-background-color: #ebedf3;" BorderPane.alignment="CENTER">
                     <children>
-                        <AnchorPane layoutX="-1.0" layoutY="-12.0" prefHeight="684.0" prefWidth="1087.0" style="-fx-background-color: #ebedf3;">
+                        <AnchorPane layoutY="-13.0" prefHeight="684.0" prefWidth="1087.0" style="-fx-background-color: #ebedf3;">
                             <children>
                                 <Button layoutX="602.0" layoutY="18.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="66.0" style="-fx-background-color: transparent;" />
                                 <TextField layoutX="54.0" layoutY="289.0" prefHeight="57.0" prefWidth="473.0" promptText="email" style="-fx-background-color: transparent;" text="torkimeriemamira@gmail.com">
@@ -120,9 +121,9 @@
                                     </image>
                                 </ImageView>
                         <AnchorPane layoutX="602.0" layoutY="346.0" prefHeight="2.0" prefWidth="362.0" style="-fx-background-color: #05c2d1;" />
-                        <ImageView fitHeight="152.0" fitWidth="283.0" layoutX="813.0" layoutY="533.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="152.0" fitWidth="283.0" layoutX="919.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../controller/images/g3din.png" />
+                              <Image url="@images/logopng.png" />
                            </image>
                         </ImageView>
                         <TextField layoutX="590.0" layoutY="292.0" prefHeight="57.0" prefWidth="473.0" promptText="email" style="-fx-background-color: transparent;" text="kawther.gacem1@gmail.com">
@@ -146,7 +147,7 @@
                            <children>
                               <ImageView fitHeight="178.0" fitWidth="194.0" layoutX="12.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../controller/images/woman (3).png" />
+                                    <Image url="@images/woman%20(3).png" />
                                  </image>
                               </ImageView>
                            </children>
@@ -155,11 +156,16 @@
                            <children>
                               <ImageView fitHeight="178.0" fitWidth="194.0" layoutX="12.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../controller/images/woman (2).png" />
+                                    <Image url="@images/woman%20(2).png" />
                                  </image>
                               </ImageView>
                            </children>
                         </AnchorPane>
+                        <Text layoutX="165.0" layoutY="650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="University of Science and Technology of Oran">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
                             </children>
                         </AnchorPane>
                     </children>
